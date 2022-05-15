@@ -17,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import javax.inject.Singleton
 @Module
+@InstallIn(SingletonComponent::class)
 object ApiModule {
 
     @Module

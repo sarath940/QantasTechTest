@@ -1,5 +1,6 @@
 package com.example.qantastechtest.utils
 
+import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -17,3 +18,9 @@ val Fragment.actionBar: ActionBar?
 var View.visible: Boolean
     get() = visibility == View.VISIBLE
     set(value) = if (value) visibility = View.VISIBLE else visibility = View.GONE*/
+fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
+    val safeClickListener = SafeClickListener {
+        onSafeClick(it)
+    }
+    setOnClickListener(safeClickListener)
+}
