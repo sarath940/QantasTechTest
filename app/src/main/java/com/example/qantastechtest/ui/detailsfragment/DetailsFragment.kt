@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.qantastechtest.R
-import com.example.qantastechtest.data.model.QantasDataModel
 import com.example.qantastechtest.data.model.QantasDataModel.QantasDataModelItem
 import com.example.qantastechtest.utils.actionBar
 import com.example.qantastechtest.utils.setSafeOnClickListener

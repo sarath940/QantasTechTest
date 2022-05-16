@@ -1,11 +1,20 @@
 # QantasTechTest
-App shows the list of airports names from the api/database.when we click on the airport name it 
-is goes details of the airport. It is full written in Kotlin using MVVM architecture and livedata. 
-It is saves the data in the local database using room database
-Junit test cases are written for the view model and repository using mockito with 80% test coverage
+when the app opens it shows the list of airports names from the api/database.when we select on
+one of the item it goes to the detail page of that particular airport.
+
+## Details of the project
+*It is full written in Kotlin using MVVM architecture,livedata and coroutines. 
+*It is saves the data in the local database using room database after the API call.
+*Junit test cases are written for the view model and repository using mockito with 80% test coverage.
+
 ️
 ## Clone the repository by following git command
 git clone https://github.com/sarath940/QantasTechTest.git
+
+## How to run the Project
+* Just make sure connected to the internet in the Emulator/Device.
+* just clean the build before the run the application.
+* Min SDK is 26 to run the app in the Emulator/Device.
 
 ## Features
 * kotlin coroutines for async operations
