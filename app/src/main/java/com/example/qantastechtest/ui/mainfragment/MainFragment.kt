@@ -52,6 +52,14 @@ class MainFragment : Fragment(),ItemCallback {
             }
         }
 
+        retry_button.setOnClickListener {
+            if (Utilities.hasInternetConnection(requireContext())) mainViewModel.getQantasDataModel() else Utilities.showToast(
+                requireContext(),
+                getString(R.string.check_ur_internet_connection),
+                Toast.LENGTH_SHORT
+            )
+        }
+
         mainViewModel.qantasDataModelLiveData.observe(viewLifecycleOwner) {
             when (it) {
                 is Resource.Success -> {
@@ -90,10 +98,12 @@ class MainFragment : Fragment(),ItemCallback {
     private fun setAdapterData(data: List<QantasDataModelItem>?) {
         if (data?.isEmpty() == true) {
             no_data.visibility = View.VISIBLE
+            retry_button.visibility=View.VISIBLE
             recycler_view.visibility = View.GONE
         } else {
             recycler_view.visibility = View.VISIBLE
             no_data.visibility = View.GONE
+            retry_button.visibility=View.GONE
             mainAdapter.differ.submitList(data)
         }
 

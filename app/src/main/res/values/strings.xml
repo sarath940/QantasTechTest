@@ -10,4 +10,8 @@
     <string name="time_zone">Time Zone</string>
     <string name="loading_data">Loading Data</string>
     <string name="airport_data">airportData</string>
+    <string name="there_is_no_data_present_currently">There is no data present currently</string>
+    <string name="retry">Retry</string>
+    <string name="back">Back</string>
+    <string name="n_a">N/A</string>
 </resources>

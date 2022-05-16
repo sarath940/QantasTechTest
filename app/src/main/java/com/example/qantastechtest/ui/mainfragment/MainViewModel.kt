@@ -25,7 +25,7 @@ class MainViewModel @Inject constructor(val repository: Repository) : ViewModel(
 
 
     fun getQantasDataModel() =
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             qantasDataModelResponseModel = null
             qantasDataModelLiveData.postValue(Resource.Loading())
             try {
@@ -58,7 +58,7 @@ class MainViewModel @Inject constructor(val repository: Repository) : ViewModel(
 
 
     fun insertAll(list: List<QantasDataModelItem>) {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             repository.saveData(list)
         }
     }
