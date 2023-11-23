@@ -3,9 +3,9 @@ when the app opens it shows the list of airports names from the api/database.whe
 one of the item it goes to the detail page of that particular airport.
 
 ## Details of the project
-*It is full written in Kotlin using MVVM architecture,livedata and coroutines. 
-*It is saves the data in the local database using room database after the API call.
-*Junit test cases are written for the view model and repository using mockito with 80% test coverage.
+* It is full written in Kotlin using MVVM architecture,livedata and coroutines. 
+* It is saves the data in the local database using room database after the API call.
+* Junit test cases are written for the view model and repository using mockito with 80% test coverage.
 
 ️
 ## Clone the repository by following git command
